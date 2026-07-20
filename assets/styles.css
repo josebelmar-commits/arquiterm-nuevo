@@ -88,3 +88,36 @@ textarea,
 @media (max-width: 540px) {
   .hero-bg { background-position: 58% center; }
 }
+/* Optimización específica para teléfonos */
+@media (max-width: 640px) {
+  .hero-bg {
+    background-position: 68% center;
+  }
+
+  .hero-image-note {
+    display: none;
+  }
+
+  main > section:first-of-type {
+    min-height: calc(100svh - 72px);
+  }
+
+  main > section:first-of-type h1 {
+    max-width: 10ch;
+    font-size: clamp(2.75rem, 12vw, 3.5rem) !important;
+    line-height: 0.96 !important;
+  }
+
+  main > section:first-of-type p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  main > section:first-of-type .btn {
+    min-height: 48px;
+  }
+
+  section[id] {
+    scroll-margin-top: 88px;
+  }
+}
