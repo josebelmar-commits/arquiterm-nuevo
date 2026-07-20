@@ -208,8 +208,16 @@ function setStatus(element, message, isError = false) {
 
 function openWhatsApp(message) {
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-  const popup = window.open(url, "_blank", "noopener,noreferrer");
-  if (!popup) window.location.href = url;
+  const link = document.createElement("a");
+
+  link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.style.display = "none";
+
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
 }
 
 function formValue(form, name) {
@@ -367,7 +375,7 @@ function initQuickForm() {
     ];
     const details = formValue(form, "quickDetails");
     if (details) lines.push(`Descripción: ${details}`);
-    setStatus(status, "Abriendo WhatsApp con el mensaje preparado…");
+    setStatus(status, "Consulta respaldada. Se abrió WhatsApp para continuar.");
     openWhatsApp(lines.join("\n"));
   });
 }
@@ -405,7 +413,7 @@ function initSmartForm() {
       `Sector: ${formValue(form, "sector") || "No informado"}`,
       `Contacto preferido: ${formValue(form, "contact") || "WhatsApp"}`,
     ];
-    setStatus(status, "Abriendo WhatsApp con el mensaje preparado…");
+    setStatus(status, "Consulta respaldada. Se abrió WhatsApp para continuar.");
     openWhatsApp(lines.join("\n"));
   });
 }
