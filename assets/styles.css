@@ -7,6 +7,16 @@
   --font-geist-sans: Arial, Helvetica, sans-serif;
   --font-geist-mono: "Courier New", Courier, monospace;
 }
+/* Aumento general de legibilidad */
+html {
+  font-size: 17px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
 .hero-bg {
   background-position: center top;
 }
