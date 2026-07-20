@@ -8,7 +8,7 @@
   --font-geist-mono: "Courier New", Courier, monospace;
 }
 .hero-bg {
-  background-position: 55% center;
+  background-position: center top;
 }
 .form-status {
   margin: 12px 0 0;
