@@ -1,0 +1,27 @@
+# Arquiterm — versión estática para GitHub Pages
+
+Esta carpeta contiene una versión independiente del sitio, preparada para funcionar sin scripts ni recursos de ChatGPT Sites.
+
+## Publicación rápida
+
+1. Cree un repositorio público en GitHub, por ejemplo `arquiterm-web`.
+2. Abra el repositorio y seleccione **Add file → Upload files**.
+3. Suba **el contenido de esta carpeta**, no el archivo ZIP completo.
+4. Confirme que `index.html` quede en la raíz del repositorio.
+5. Entre a **Settings → Pages**.
+6. En **Source**, elija **Deploy from a branch**.
+7. Seleccione la rama `main` y la carpeta `/ (root)`, luego guarde.
+
+## Archivos principales
+
+- `index.html`: página principal.
+- `privacidad.html`: política de privacidad adaptada a la versión estática.
+- `assets/styles.css`: diseño del sitio.
+- `assets/script.js`: menú, modo oscuro, selección de servicios y formularios de WhatsApp.
+- `assets/images/`: imágenes locales.
+
+## Importante
+
+- Los formularios **no almacenan datos**: preparan un mensaje y abren WhatsApp.
+- El fondo de la portada utiliza temporalmente `assets/images/ignacio-carrera-pinto.jpg`, porque Chrome no incluyó la imagen de fondo original al guardar la página. Puede reemplazarse por otra imagen manteniendo el mismo nombre o modificando la regla `.hero-bg` en `assets/styles.css`.
+- Antes de conectar `arquiterm.cl`, configure el dominio en GitHub Pages y en el proveedor DNS.
